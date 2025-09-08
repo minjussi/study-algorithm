@@ -33,3 +33,29 @@ cf) 입력 시간을 빠르게 하는 방법: input 함수를 다른 것으로 �
 import sys
 input = sys.stdin.readline
 ```
+
+
+## 올바른 괄호
+
+- (스택 활용 풀이) 여는 괄호가 들어오면 stack에 push하고, 닫는 괄호가 들어오면 stack에 여는 괄호가 있는지 확인하고 없으면 False를 출력한다. 여는 괄호가 있으면 여는 괄호의 개수와 닫는 괄호의 개수가 일치하는지 확인한다. 마지막으로 stack에 여는 괄호가 남아 있는지 확인한다.
+
+```python
+def solution(s):
+    stack = []
+    answer = True
+    for i in range(len(s)):
+        if s[i] == "(":
+            stack.append(s[i])
+            
+        elif s[i] == ")":
+            if len(stack) == 0:
+                answer = False
+                return answer
+            else:
+                stack.pop(-1)
+    if len(stack) == 0:
+        answer = True
+    else:
+        answer = False
+    return answer
+```
