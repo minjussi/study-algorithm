@@ -17,6 +17,9 @@ def solution(s):
     return answer
 ```
 
+### 다른 사람 풀이
+
+
 - 사실 파이썬에는 min, max 내장 함수가 있기 때문에 이걸 사용하면 빠르게 해결할 수 있다.
 
 ```python
