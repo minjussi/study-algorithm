@@ -24,3 +24,9 @@ def solution(s):
     return answer
 ```
 
+### 다른 사람 풀이
+
+- 파이썬에는 title()이라는 내장 함수가 존재하기 때문에 
+```python
+
+```
