@@ -23,9 +23,19 @@ def fibonacci(n):
 **2. for문 활용**
 
 ```python
+def fibonacci(n):
+   if n < 2:
+        return n
+
+    a, b = 0, 1
+    for i in range(n-1):
+        a, b = b, a + b
+
+    return b
 ```
 
-- 
+- 반복문이 끝나면 b가 피보나치 수열 값이 된다.
+- 시간 복잡도는 O(n)으로 재귀적으로 해결하는 것보다 빨라진다. 
 
 **3. 동적 계획법**
 
