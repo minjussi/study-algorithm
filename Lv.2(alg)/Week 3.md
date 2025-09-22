@@ -39,19 +39,32 @@ def fibonacci(n):
 
 **3. 동적 계획법**
 
+```python
+```
 
+- 불필요한 중복을 피하기 위해 앞서 계산한 피보나치 수열 값을 배열에 저장하고, 계산된 값을 활용하는 방식이다.
+-  
 
 **4. 행렬과 분할 정복법**
 
+```python
+def fibonacci(n):
+   
+```
 
 
 **5. 일반항 활용**
 
-- 놀랍게도 .. 피보나치 수를 구하는 일반항 존재 ..
+- 놀랍게도 .. 피보나치 수를 구하는 일반항이 존재한다. 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/c9476952-72de-4840-b4b3-94c66252c82b" width=45% "/>
 </p>
 
 ```python
+def fibonacci(n):
+    sqrt_5 = 5 ** (1/2)
+    ans = 1 / sqrt_5 * ( ((1 + sqrt_5) / 2) ** n  - ((1 - sqrt_5) / 2) ** n )
+    return int(ans)
 ```
 
+- 행렬을 활용하는 것과 같은 시간 복잡도를 가진다. (O(log n))
