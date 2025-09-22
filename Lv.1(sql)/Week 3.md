@@ -30,3 +30,34 @@ ORDER BY hire_ymd DESC, dr_name ASC;
 
 - 조건식 작성: AND, OR과 같이 표현 & "is equl to"는 "="으로 표현
 > MCDP_CD = "CS" OR MCDP_CD = "GS"
+
+## 상위 n개 레코드
+(mysql 기준)
+
+```sql
+SELECT NAME
+FROM ANIMAL_INS
+ORDER BY DATETIME
+LIMIT 1;
+```
+
+- LIMIT: 정렬된 결과에서 원하는 개수만큼 행을 가져오는 데 사용
+
+<참고>
+(Oracle: 서브 쿼리에서 정렬 후 WHERE에서 rownum으로 원하는 개수 입력)
+```sql
+SELECT *
+FROM (
+    SELECT *
+    FROM your_table
+    ORDER BY column_name DESC
+)
+WHERE ROWNUM = 1;
+```
+
+(SQL Server, MS Access: TOP 사용)
+```sql
+SELECT TOP 1 *
+FROM your_table
+ORDER BY column_name DESC; -- 원하는 기준 컬럼으로 정렬
+```
